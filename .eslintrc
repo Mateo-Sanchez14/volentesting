@@ -8,7 +8,7 @@
   ],
   "plugins": ["import", "prettier", "license-header"],
   "rules": {
-    "prettier/prettier": ["error", { "endOfLine": "auto" }],
+    "prettier/prettier": ["error", { "endOfLine": "auto", "semi": false }],
     "import/newline-after-import": ["error", { "count": 1 }],
     "import/no-relative-packages": "error",
     "import/prefer-default-export": "error",
@@ -17,5 +17,8 @@
   "env": {
     "browser": true,
     "node": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 13
   }
 }
