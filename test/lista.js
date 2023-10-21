@@ -27,27 +27,20 @@ describe('In the list of pairs key-value ...', () => {
   })
 
   describe('When an elements is added to the empty list', () => {
+    const newList = new List()
+    newList.add('key', 'value')
     it('There is one element', () => {
-      const newList = new List()
-      newList.add('key', 'value')
       assert.equal(newList.length(), 1)
     })
     it('The key value in first is found', () => {
-      const newList = new List()
-      newList.add('key', 'value')
       assert.equal(newList.find('key'), 'value')
     })
 
     it('There is one element', () => {
-      const newList = new List()
-      newList.add('key', 'value')
       newList.add('key', 'value2')
       assert.equal(newList.length(), 1)
     })
     it('The value of the key is updated', () => {
-      const newList = new List()
-      newList.add('key', 'value')
-      newList.add('key', 'value2')
       assert.equal(newList.find('key'), 'value2')
     })
   })
